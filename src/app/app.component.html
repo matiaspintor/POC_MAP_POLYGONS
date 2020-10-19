@@ -1,0 +1,34 @@
+<div class="col-lg-6 float-left mt-3">
+  <div id="map-demo" style="width:100%;height:600px;"></div>
+</div>
+
+<div class="col-lg-6 float-left mt-3">
+<h4>Crear zona</h4>
+  <div>
+    <input type="text" class="form-control w-50" placeholder="Nombre zona" [(ngModel)]="nombreZona"/>
+  </div>
+  <h5>Mis comunas seleccionadas</h5>
+  <ul>
+    <li *ngFor="let comuna of comunasSeleccionadas">{{comuna}}</li>
+  </ul>
+  <button (click)="crearZona()" class="btn btn-primary">Crear zona</button>
+</div>
+
+<div class="col-lg-8 float-left">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Comunas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let zona of zonasCreadas">
+        <th scope="row">{{zona.count}}</th>
+        <td>{{zona.nombreZona}}</td>
+        <td>{{zona.comunas}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
