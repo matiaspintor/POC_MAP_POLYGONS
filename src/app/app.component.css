@@ -1,0 +1,8 @@
+li{
+    list-style: none;
+}
+li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+  }
